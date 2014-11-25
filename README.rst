@@ -6,6 +6,13 @@ Django Dynamic Models is a app that enable change model fields if other other ap
 
 Detailed documentation is in the "docs" directory.
 
+Install
+-----------
+```
+pip install --upgrade django_dynamic_models
+```
+
+
 Quick start
 -----------
 
