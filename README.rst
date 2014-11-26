@@ -30,14 +30,11 @@ Quick start
 
     class ArticleBase(models.Model):
         id = models.AutoField(primary_key=True)
-        name = models.CharField(max_length=50)
-                
+        name = models.CharField(max_length=50)   
         class Meta:
             abstract  = True
-
         def __unicode__(self):
-            return u'%s' % self.name
-            
+            return u'%s' % self.name  
     Article = type('Article', (ArticleBase,), django_dynamic_models.change.get_model_changes('Article'))
 
 
@@ -45,7 +42,6 @@ Quick start
 
     import django_dynamic_models
     from django.db import models
-
     django_dynamic_models.change.register('Article', **{
         'brand' : models.CharField(max_length=30, blank = True, null = True),        
     })
