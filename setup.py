@@ -1,5 +1,7 @@
+
+
 import os
-from setuptools import setup
+from distutils.core import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
@@ -15,7 +17,7 @@ setup(
     license='BSD License',
     description='A Django app that enable change model fields if other other apps models',
     long_description=README,
-    url='',
+    url='https://pypi.python.org/pypi/django-dynamic-models',
     author='Jesus Manuel Herrera Miramontes',
     author_email='jesusmaherrera@gmail.com',
     classifiers=[
@@ -33,3 +35,6 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
 )
+
+class upload:
+  shared_options = {'register': ['repository']}

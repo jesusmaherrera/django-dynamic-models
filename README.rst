@@ -9,7 +9,7 @@ Detailed documentation is in the "docs" directory.
 Install
 -----------
 ```
-pip install --upgrade django_dynamic_models
+pip install --upgrade django-dynamic-models
 ```
 
 
