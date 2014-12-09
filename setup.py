@@ -11,7 +11,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-dynamic-models',
-    version='0.0.1',
+    version='0.0.5',
     packages=['django_dynamic_models'],
     include_package_data=True,
     license='BSD License',

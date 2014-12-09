@@ -46,20 +46,23 @@ class ModelChange(object):
 
         return False
 
-    def get_model_changes(self, model_name):
+    def get_model_changes(self, model_name, app_label):
         """
         get model changes.
         """
-        changes = {'__module__':'articulos.models',}
+        changes = {'__module__':'%s.models'%app_label,}
 
         if self.has_model_changes(model_name):
             changes.update(self._registry[model_name])
             
         return changes
 
+
     def get_changes(self):
         return self._registry
 
+    def load(self, model_name, model_base_class, app_label):
+        return type(model_name, (model_base_class,), self.get_model_changes(model_name, app_label)) 
 # This global object represents the default admin site, for the common case.
 # You can instantiate ModelChange in your own code to create a custom admin site.
 change = ModelChange()
